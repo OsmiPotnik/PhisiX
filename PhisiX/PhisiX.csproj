@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26757D0B-7A49-4CCE-A479-BD6ABA402E09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PhisiX</RootNamespace>
+    <AssemblyName>PhisiX</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="MonoGame.Framework.Linux, Version=2.5.1.0, Culture=neutral">
+      <Private>False</Private>
+      <Package>monogame</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Movement\IVelocity.cs" />
+    <Compile Include="Movement\IPosition.cs" />
+    <Compile Include="Movement\IMovable.cs" />
+    <Compile Include="Rotation\IRotation.cs" />
+    <Compile Include="Rotation\IAngularVelocity.cs" />
+    <Compile Include="Rotation\IRotatable.cs" />
+    <Compile Include="Physics\MovementPhysics.cs" />
+    <Compile Include="Shapes\IRadius.cs" />
+    <Compile Include="Shapes\IRectangleSize.cs" />
+    <Compile Include="Physical Properties\IMass.cs" />
+    <Compile Include="Physical Properties\IAngularMass.cs" />
+    <Compile Include="Physical Properties\ICoefficientOfRestitution.cs" />
+    <Compile Include="Physical Properties\ICoefficientOfFriction.cs" />
+    <Compile Include="Math\HalfPlane.cs" />
+    <Compile Include="Math\MathEnums.cs" />
+    <Compile Include="Math\AAHalfPlane.cs" />
+    <Compile Include="Colliders\IParticleCollider.cs" />
+    <Compile Include="Colliders\IIHalfPlaneCollider.cs" />
+    <Compile Include="Colliders\IAAHalfPlaneCollider.cs" />
+    <Compile Include="Colliders\IRectangleCollider.cs" />
+    <Compile Include="Colliders\IAARectangleCollider.cs" />
+    <Compile Include="Colliders\ICustomCollider.cs" />
+    <Compile Include="Math\ConvexPolygon.cs" />
+    <Compile Include="Colliders\IConvexCollider.cs" />
+    <Compile Include="Collision\ICollisionAlgorithm.cs" />
+    <Compile Include="Collision\Collision.cs" />
+    <Compile Include="Collision\CollisionAlgorithm.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Movement\" />
+    <Folder Include="Rotation\" />
+    <Folder Include="Physics\" />
+    <Folder Include="Shapes\" />
+    <Folder Include="Physical Properties\" />
+    <Folder Include="Math\" />
+    <Folder Include="Colliders\" />
+    <Folder Include="Collision\" />
+  </ItemGroup>
+</Project>

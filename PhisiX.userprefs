@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PhisiX/Math/ConvexPolygon.cs">
+    <Files>
+      <File FileName="PhisiX/Colliders/IIHalfPlaneCollider.cs" Line="4" Column="27" />
+      <File FileName="PhisiX/Colliders/IAAHalfPlaneCollider.cs" Line="4" Column="27" />
+      <File FileName="PhisiX/Colliders/IRectangleCollider.cs" Line="7" Column="3" />
+      <File FileName="PhisiX/Colliders/IAARectangleCollider.cs" Line="3" Column="22" />
+      <File FileName="PhisiX/Colliders/ICustomCollider.cs" Line="11" Column="1" />
+      <File FileName="PhisiX/Colliders/IParticleCollider.cs" Line="7" Column="3" />
+      <File FileName="PhisiX/Math/ConvexPolygon.cs" Line="27" Column="53" />
+      <File FileName="PhisiX/Colliders/IConvexCollider.cs" Line="10" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

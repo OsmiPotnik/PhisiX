@@ -50,20 +50,20 @@
     <Compile Include="Physical Properties\IAngularMass.cs" />
     <Compile Include="Physical Properties\ICoefficientOfRestitution.cs" />
     <Compile Include="Physical Properties\ICoefficientOfFriction.cs" />
-    <Compile Include="Math\HalfPlane.cs" />
-    <Compile Include="Math\MathEnums.cs" />
-    <Compile Include="Math\AAHalfPlane.cs" />
     <Compile Include="Colliders\IParticleCollider.cs" />
     <Compile Include="Colliders\IIHalfPlaneCollider.cs" />
     <Compile Include="Colliders\IAAHalfPlaneCollider.cs" />
     <Compile Include="Colliders\IRectangleCollider.cs" />
     <Compile Include="Colliders\IAARectangleCollider.cs" />
     <Compile Include="Colliders\ICustomCollider.cs" />
-    <Compile Include="Math\ConvexPolygon.cs" />
     <Compile Include="Colliders\IConvexCollider.cs" />
     <Compile Include="Collision\ICollisionAlgorithm.cs" />
     <Compile Include="Collision\Collision.cs" />
     <Compile Include="Collision\CollisionAlgorithm.cs" />
+    <Compile Include="Mathematics\HalfPlane.cs" />
+    <Compile Include="Mathematics\MathEnums.cs" />
+    <Compile Include="Mathematics\AAHalfPlane.cs" />
+    <Compile Include="Mathematics\ConvexPolygon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -72,8 +72,8 @@
     <Folder Include="Physics\" />
     <Folder Include="Shapes\" />
     <Folder Include="Physical Properties\" />
-    <Folder Include="Math\" />
     <Folder Include="Colliders\" />
     <Folder Include="Collision\" />
+    <Folder Include="Mathematics\" />
   </ItemGroup>
 </Project>

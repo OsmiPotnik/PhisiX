@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Microsoft.Xna.Framework;
 
-namespace PhisiX.Math
+namespace PhisiX.Mathematics
 {
 	public class ConvexPolygon
 	{

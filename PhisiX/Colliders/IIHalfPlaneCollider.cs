@@ -1,5 +1,5 @@
 using System;
-using PhisiX.Math;
+using PhisiX.Mathematics;
 
 namespace PhisiX.Colliders
 {

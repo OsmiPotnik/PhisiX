@@ -8,22 +8,31 @@ namespace PhisiX
 	{
 
 		public static void CollisionBetween(Object item1, Object item2){
-			CollisionBetween(item1,item1,true);
+			CollisionBetween(item1,item2,true);
 		}
 
 		public static void CollisionBetween (Object item1, Object item2, bool recursive){
 			//TODO Resolve collision between two objects
 			// Algorithms not finished yet
 
-			/*IParticleCollider item1Particle = item1 as IParticleCollider;
-			IAARectangleColider item1AARectangle = item1 as IAARectangleColider;
-
+			IParticleCollider item1Particle = item1 as IParticleCollider;
 			IParticleCollider item2Particle = item2 as IParticleCollider;
+			/*IAARectangleColider item1AARectangle = item1 as IAARectangleColider;
+
+
 			IAAHalfPlaneCollider item2AAHalfPlane = item2 as IAAHalfPlaneCollider;
 			IAARectangleColider item2AARectangle = item2 as IAARectangleColider;
 
 			IHalfPlaneCollider item2HalfPlane = item2 as IHalfPlaneCollider;
 			IConvexCollider item2Convex = item2 as IConvexCollider;*/
+
+			if (item1Particle != null && item2Particle != null) {
+				ParticleParticleCollision colider = new ParticleParticleCollision ();
+				colider.CollisionBetween (item1Particle, item2Particle);
+			}
+
+			if (recursive)
+				Collision.CollisionBetween (item2Particle,item1Particle,false);
 
 		}
 
@@ -98,7 +107,7 @@ namespace PhisiX
 				itemWithPosition2.Position = Vector2.Add (itemWithPosition2.Position, Vector2.Multiply (relaxDistance, relaxPercent2));
 		}
 
-		public void ExchangeEnergyBetween (Object item1, Object item2, Vector2 collisionNormal, Vector2 pointOfImpact){
+		public static void ExchangeEnergyBetween (Object item1, Object item2, Vector2 collisionNormal, Vector2 pointOfImpact){
 			IPosition item1WithPosition = item1 as IPosition;
 			IMovable movableItem1 = item1 as IMovable;
 			IRotatable rotatableItem1 = item1 as IRotatable;

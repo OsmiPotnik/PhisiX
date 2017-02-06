@@ -4,7 +4,9 @@ namespace PhisiX
 {
 	public class CollisionAlgorithm : ICollisionAlgorithm
 	{
-		public void CollisionBetween(Object item1, Object item2){
+
+
+		public virtual void CollisionBetween(Object item1, Object item2){
 			Collision.CollisionBetween(item1,item2,this);
 		}
 

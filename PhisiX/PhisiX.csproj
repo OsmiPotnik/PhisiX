@@ -64,6 +64,10 @@
     <Compile Include="Mathematics\MathEnums.cs" />
     <Compile Include="Mathematics\AAHalfPlane.cs" />
     <Compile Include="Mathematics\ConvexPolygon.cs" />
+    <Compile Include="Collision\ParticleParticleCollision.cs" />
+    <Compile Include="Composites\IParticle.cs" />
+    <Compile Include="Composites\IAARectangle.cs" />
+    <Compile Include="Composites\ICircle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -75,5 +79,6 @@
     <Folder Include="Colliders\" />
     <Folder Include="Collision\" />
     <Folder Include="Mathematics\" />
+    <Folder Include="Composites\" />
   </ItemGroup>
 </Project>

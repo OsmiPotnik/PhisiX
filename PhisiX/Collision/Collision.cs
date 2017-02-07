@@ -17,11 +17,12 @@ namespace PhisiX
 
 			IParticleCollider item1Particle = item1 as IParticleCollider;
 			IParticleCollider item2Particle = item2 as IParticleCollider;
-			/*IAARectangleColider item1AARectangle = item1 as IAARectangleColider;
+			IAARectangleColider item1AARectangle = item1 as IAARectangleColider;
 
-
-			IAAHalfPlaneCollider item2AAHalfPlane = item2 as IAAHalfPlaneCollider;
 			IAARectangleColider item2AARectangle = item2 as IAARectangleColider;
+
+			/*IAAHalfPlaneCollider item2AAHalfPlane = item2 as IAAHalfPlaneCollider;
+
 
 			IHalfPlaneCollider item2HalfPlane = item2 as IHalfPlaneCollider;
 			IConvexCollider item2Convex = item2 as IConvexCollider;*/
@@ -29,10 +30,16 @@ namespace PhisiX
 			if (item1Particle != null && item2Particle != null) {
 				ParticleParticleCollision colider = new ParticleParticleCollision ();
 				colider.CollisionBetween (item1Particle, item2Particle);
+				return;
+			}
+
+			if (item1Particle != null && item2AARectangle != null) {
+				ParticleAARectangleCollision.CollisionBetween (item1Particle,item2AARectangle);
+				return;
 			}
 
 			if (recursive)
-				Collision.CollisionBetween (item2Particle,item1Particle,false);
+				Collision.CollisionBetween (item2,item1,false);
 
 		}
 
